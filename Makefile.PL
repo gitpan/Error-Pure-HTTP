@@ -21,10 +21,11 @@ resources 'repository' => 'git://github.com/tupinek/Error-Pure-HTTP';
 test_requires 'English' => 0;
 test_requires 'File::Object' => 0.05;
 test_requires 'Test::More' => 0;
+test_requires 'Test::NoWarnings' => 0;
 test_requires 'Test::Pod' => 0;
 test_requires 'Test::Pod::Coverage' => 0;
 tests_recursive;
-version '0.01';
+version '0.02';
 
 # Run.
 WriteAll();
