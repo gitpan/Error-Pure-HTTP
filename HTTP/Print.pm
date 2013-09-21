@@ -16,7 +16,7 @@ Readonly::Scalar my $EMPTY_STR => q{};
 Readonly::Scalar my $EVAL => 'eval {...}';
 
 # Version.
-our $VERSION = 0.11;
+our $VERSION = 0.12;
 
 # Ignore die signal.
 $SIG{__DIE__} = 'IGNORE';
@@ -129,12 +129,17 @@ L<Readonly>.
 
 L<Error::Pure>,
 L<Error::Pure::AllError>,
+L<Error::Pure::Always>,
 L<Error::Pure::Die>,
 L<Error::Pure::Error>,
 L<Error::Pure::ErrorList>,
 L<Error::Pure::HTTP::AllError>,
 L<Error::Pure::HTTP::Error>,
 L<Error::Pure::HTTP::ErrorList>,
+L<Error::Pure::HTTP::JSON>,
+L<Error::Pure::JSON>,
+L<Error::Pure::NoDie>,
+L<Error::Pure::Output::JSON>,
 L<Error::Pure::Output::Text>,
 L<Error::Pure::Utils>.
 
@@ -154,6 +159,6 @@ BSD license.
 
 =head1 VERSION
 
-0.11
+0.12
 
 =cut
