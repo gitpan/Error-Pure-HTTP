@@ -7,9 +7,10 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Perl module for plain HTTP output for structured errors.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Error-Pure-HTTP';
+readme_from 'HTTP.pm';
 requires 'Error::Pure::Utils' => 0.09;
 requires 'Error::Pure::Output::Text' => 0.09;
 requires 'List::MoreUtils' => 0;
@@ -26,7 +27,7 @@ test_requires 'Test::NoWarnings' => 0;
 test_requires 'Test::Pod' => 0;
 test_requires 'Test::Pod::Coverage' => 0;
 tests_recursive;
-version '0.12';
+version '0.13';
 
 # Run.
 WriteAll();

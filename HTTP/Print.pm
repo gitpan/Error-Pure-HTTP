@@ -16,7 +16,7 @@ Readonly::Scalar my $EMPTY_STR => q{};
 Readonly::Scalar my $EVAL => 'eval {...}';
 
 # Version.
-our $VERSION = 0.12;
+our $VERSION = 0.13;
 
 # Ignore die signal.
 $SIG{__DIE__} = 'IGNORE';
@@ -30,7 +30,11 @@ sub err {
 
 	# Error message.
 	my $e = $errors[-1]->{'msg'}->[0];
-	chomp $e;
+	if (! defined $e) {
+		$e = 'undef';
+	} else {
+		chomp $e;
+	}
 
 	# Finalize in main on last err.
 	my $stack_ar = $errors[-1]->{'stack'};
@@ -159,6 +163,6 @@ BSD license.
 
 =head1 VERSION
 
-0.12
+0.13
 
 =cut
